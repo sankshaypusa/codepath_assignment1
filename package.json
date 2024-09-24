@@ -1,0 +1,13 @@
+{
+    "name": "social-responsibility-index",
+    "version": "1.0.0",
+    "description": "A simple app to display the social responsibility index of FAANG companies.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
+  
