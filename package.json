@@ -4,10 +4,14 @@
     "description": "A simple app to display the social responsibility index of FAANG companies.",
     "main": "server.js",
     "scripts": {
-      "start": "node server.js"
+        "start": "node server.js"
     },
     "dependencies": {
-      "express": "^4.17.1"
-    }
-  }
-  
+        "dotenv": "^16.4.5",
+        "express": "^4.21.0",
+        "pg": "^8.13.0"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

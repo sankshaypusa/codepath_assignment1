@@ -7,6 +7,15 @@ const PORT = 3000;
 // Static assets like CSS and images
 app.use(express.static(path.join(__dirname, 'public')));
 
+module.exports = {
+    user: 'postgres',
+    host: 'postgres-pd_m.railway.internal',
+    database: 'postgresql://postgres:kyyqpOvCnZybDhoksuwJpRAFSkDEgjli@autorack.proxy.rlwy.net:24115/railway',
+    password: 'kyyqpOvCnZybDhoksuwJpRAFSkDEgjli',
+    port: 5432,
+};
+
+
 // Sample company data
 const companies = [
     { id: 1, name: 'Facebook', logo: 'facebook.png', mission: 'To bring the world closer together.', lobbying: '$20M', diversityScore: 65, environmentalResponsibility: 45, politicalIntrigue: 70 },
