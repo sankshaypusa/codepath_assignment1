@@ -27,6 +27,11 @@ module.exports = (pool) => {
             res.status(500).json({ error: err.message });
         }
     });
+    // Route to update a company by ID
+router.put('/:id', CompaniesController.updateCompany);
+
+// Route to delete a company by ID
+router.delete('/:id', CompaniesController.deleteCompany);
 
     return router;
 };
