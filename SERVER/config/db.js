@@ -1,12 +1,13 @@
-import pg from 'pg';
+// In db.js
+const { Pool } = require("pg");
 
-const config = {
-    user: 'postgres',
-    password: 'postgres-pd_m.railway.internal',
-    host: 'postgres-pd_m.railway.internal',
-    port: 5432,
-    database: 'railway',
-};
+// The secret connection string you copied earlier
+const connectionString =
+  "postgresql://postgres:sKbIYsXUJSRYDpnXnORhEJCdfWPDIRDl@junction.proxy.rlwy.net:13671/railway";
 
-export const pool = new pg.Pool(config);
+const pool = new Pool({
+  connectionString,
+});
+
+module.exports = pool;
 

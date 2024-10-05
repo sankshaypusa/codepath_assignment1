@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/picocss">
-    <link rel="stylesheet" href="/styles.css">
-    <title>Social Responsibility Index</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Companies List</title>
 </head>
 <body>
-    <header>
-        <h1>Social Responsibility Index</h1>
-        <p>Click on a company to view details about their social responsibility.</p>
-    </header>
+    <h1>Companies List</h1>
+    <input type="text" id="companySearch" placeholder="Search companies...">
+    <button onclick="searchCompanies()">Search</button>
+    <ul id="companyList"></ul>
 
-    <main>
-        <ul>
-            <li><a href="/company/1">EcoTech Solutions</a> - Diversity: 85%, Environmental Responsibility: 90%</li>
-            <li><a href="/company/2">Green Energy Corp</a> - Diversity: 70%, Environmental Responsibility: 95%</li>
-            <li><a href="/company/3">Inclusive Ventures</a> - Diversity: 95%, Environmental Responsibility: 60%</li>
-            <li><a href="/company/4">Tech Giants International</a> - Diversity: 60%, Environmental Responsibility: 75%</li>
-            <li><a href="/company/5">Sustainable Goods Co.</a> - Diversity: 80%, Environmental Responsibility: 85%</li>
-        </ul>
-    </main>
+    <script src="script.js"></script>
 </body>
 </html>
