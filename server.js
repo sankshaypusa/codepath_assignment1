@@ -18,7 +18,7 @@ const pool = new Pool({
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API endpoint to get companies from the database
-app.get('/companies 1', async (req, res) => {
+app.get('/companies', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM companies');
         res.json(result.rows);
@@ -31,22 +31,6 @@ app.get('/companies 1', async (req, res) => {
 // Fallback route to serve the main HTML file
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-// In index.js
-
-
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
-
-app.get("/posts", async (req, res) => {
-  const posts = await pool.query("SELECT * FROM posts;");
-  res.send({ posts });
-});
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
 });
 
 // Start the server

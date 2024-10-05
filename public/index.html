@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Companies List</title>
+    <title>Company Management</title>
 </head>
 <body>
-    <h1>Companies List</h1>
-    <input type="text" id="companySearch" placeholder="Search companies..." />
-    <button onclick="searchCompanies()">Search</button>
-    <ul id="companyList"></ul>
+    <div class="container">
+        <h1>Company Management</h1>
+
+        <!-- Form to add new companies -->
+        <form id="addCompanyForm">
+            <h2>Add New Company</h2>
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <input type="text" id="industry" placeholder="Industry" required>
+            <input type="text" id="attribute" placeholder="Attribute">
+            <textarea id="description" placeholder="Describe the company..." rows="4" required></textarea>
+            <input type="text" id="imageUrl" placeholder="Image URL (optional)">
+            <button type="submit">Add Company</button>
+        </form>
+
+        <!-- Search and company list section -->
+        <div class="search-container">
+            <input type="text" id="companySearch" placeholder="Search companies...">
+            <button onclick="searchCompanies()">Search</button>
+        </div>
+
+        <h2>Company List</h2>
+        <ul id="companyList">
+            <p id="noCompaniesMessage" class="empty-message">No companies added yet. Please add a company using the form above.</p>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
